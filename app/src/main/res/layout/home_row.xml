@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="product"
+            type="com.example.midterm.models.Product" />
+        
+        <variable
+            name="homeInterface"
+            type="com.example.midterm.adapters.HomeListAdapter.HomeInterface" />
+
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:onClick="@{() -> homeInterface.onItemClick(product)}">
+
+        <ImageView
+            android:id="@+id/productImageView"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:productImage="@{product.imageURL}"
+            android:contentDescription="@string/ImageOfProduct" />
+
+        <TextView
+            android:id="@+id/productNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            android:textSize="18sp"
+            android:text="@{product.name}" />
+
+        <TextView
+            android:id="@+id/priceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            android:textColor="@color/red"
+            android:textSize="16sp"
+            android:text="@{`Price: ` + String.valueOf(product.price)}" />
+
+        <TextView
+            android:id="@+id/availableTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            android:textColor="@color/green"
+            android:textSize="14sp"
+            android:text="@{product.available ? `Available` : `Not available`}" />
+
+        <Button
+            android:id="@+id/addToCartButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:enabled="@{product.available}"
+            android:onClick="@{() -> homeInterface.addItem(product)}"
+            android:text="@string/add_to_cart" />
+    </LinearLayout>
+</layout>
