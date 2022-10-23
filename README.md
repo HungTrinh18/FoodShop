@@ -8,6 +8,7 @@ With FoodShop, customers can easily order pickup or delivery directly from the r
 * See details of product
 * Remove products
 * Change quantities of products
+* View cart
 * Checkout
 
 
