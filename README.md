@@ -13,7 +13,7 @@ With FoodShop, customers can easily order pickup or delivery directly from the r
 
 
 # Demo
-<img src="https://github.com/HungTrinh18/FoodShop/blob/main/Demo/Demo.gif" width="40" height="40" />
+<img src="https://github.com/HungTrinh18/FoodShop/blob/main/Demo/Demo.gif" width="120" height="120" />
 
 # Install
 Clone the project -> Go to the APK folder -> then drag the **`FoodShop.apk`** file to the emulator.
