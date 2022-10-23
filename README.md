@@ -16,3 +16,4 @@ With FoodShop, customers can easily order pickup or delivery directly from the r
 
 
 # Install
+Clone the project -> Go to the APK folder -> then drag the **`Notes.apk`** file to the emulator.
